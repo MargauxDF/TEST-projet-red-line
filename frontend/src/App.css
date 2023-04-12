@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+* {
+  margin: 0; /* margin et padding : 0 run over, like an elephant, every default style on the page.*/ 
+  padding: 0; /* This can be useful as sometimes different browsers have different default stylings for different elements. */
+  box-sizing: border-box; /* the height and width of the box will remain fixed. The border thickness and padding will be included inside of the box */
+  font-family: 'Space Mono', monospace;
+}
+
+body {
+  background-color: hsla(325, 50%, 50%, 0.2);
+}
