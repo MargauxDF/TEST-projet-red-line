@@ -11,8 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/our-wilders" element={<WilderList />} />
-        <Route path="/my-profile" element="<div>Mon profil</div>" />
-        <Route path="/login" element="<div>login</div>" />
+        <Route path="/my-profile" element="Mon profil" />
+        <Route path="/login" element="login" />
       </Routes>
     </div>
   );
