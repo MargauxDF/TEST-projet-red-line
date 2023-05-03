@@ -18,6 +18,7 @@ It's pre-configured with a set of tools which'll help students produce industry-
 - `migrate` : Run the database migration script
 - `dev` : Starts both servers (frontend + backend) in one terminal
 - `dev-front` : Starts the React frontend server
+- `front-data-dev`: Starts the React fronted server and the JSON-server in one terminal
 - `dev-back` : Starts the Express backend server
 - `lint` : Runs validation tools, and refuses unclean code (will be executed on every _commit_)
 - `fix` : Fixes linter errors (run it if `lint` growls on your code !)

@@ -1,3 +1,32 @@
 .active{
-  color: purple;
+  background-color: hsla(325, 50%, 50%, 0.2);
+  color: white;
+}
+
+.notActive {
+  color: #100f0f;
+}
+
+.header {
+  background-color: whitesmoke;
+  padding: 20px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header nav {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+}
+
+.header ul a {
+  text-decoration: none;
+  border: 1.5px solid #555;
+  padding: 5px 10px;
+  margin: auto 1rem;
+  border-radius: 5px;
 }
