@@ -1,3 +1,9 @@
+import styles from "./Home.module.css";
+
 export default function Home() {
-  return <header className="App-header">Home</header>;
+  return (
+    <div className={styles.container}>
+      <h1>Bienvenue</h1>
+    </div>
+  );
 }
