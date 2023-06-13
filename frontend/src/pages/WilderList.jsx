@@ -3,12 +3,14 @@ import axios from "axios";
 import CardWilder from "../components/CardWilder";
 import styles from "./WilderList.module.css";
 
+const apiBaseUrl = import.meta.env.VITE_BACKEND_URL;
+
 function WilderList() {
   const [wilders, setWilders] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/wilders")
+      .get(`${apiBaseUrl}/wilders`)
       .then((response) => setWilders(response.data));
   }, []);
 
