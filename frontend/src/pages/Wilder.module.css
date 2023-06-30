@@ -39,11 +39,9 @@
 }
 
 .page a {
-  background-color: whitesmoke;
   padding: 10px 10px;
   border-radius: 5px;
   cursor: pointer;
-  margin: 10px;
   text-decoration: none;
   color: black;
 }
@@ -54,4 +52,20 @@
 
 .button {
   display: inline-block;
+  background-color: whitesmoke;
+  margin: 10px;
+}
+
+.projectList {
+  list-style: none;
+}
+
+.projectLinks {
+  display: block;
+  text-align: center;
+  font-size: x-small;
+}
+
+.contactMeButton {
+  padding: 5px;
 }

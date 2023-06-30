@@ -14,5 +14,5 @@ CREATE TABLE project (
   description TEXT,
   link varchar(255),
   user_id int(11) NOT NULL,
-  FOREIGN KEY (user_id) REFERENCES user(id)
+  FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

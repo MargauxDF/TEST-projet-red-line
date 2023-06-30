@@ -8,11 +8,11 @@ const apiBaseUrl = import.meta.env.VITE_BACKEND_URL;
 function Wilder() {
   const { id } = useParams();
 
-  const [wilder, setWilder] = useState([]);
+  const [wilder, setWilder] = useState();
 
   useEffect(() => {
     axios
-      .get(`${apiBaseUrl}/wilders/${id}`)
+      .get(`${apiBaseUrl}/wilders/${id}/projects`)
       .then((response) => setWilder(response.data))
       .catch((err) => console.error(err));
   }, []);
@@ -21,6 +21,7 @@ function Wilder() {
     window.location.href = `mailto:${wilder.email}`;
   };
 
+  if (!wilder) return null;
   return (
     <div className={styles.page}>
       <div className={styles.container}>
@@ -30,9 +31,29 @@ function Wilder() {
         <div className={styles.infos}>
           <p> prénom : {wilder.firstname} </p>
           <p> nom de famille : {wilder.lastname} </p>
-          <p> age : {wilder.age} </p>
+          <p> âge : {wilder.age} </p>
           <p> campus : {wilder.campus} </p>
-          <button onClick={sendEmail} type="button">
+          <p>
+            projects :
+            {wilder.projects.length ? (
+              <ul className={styles.projectList}>
+                {wilder.projects.map((project) => (
+                  <li key={project.id}>
+                    <a href={project.link} className={styles.projectLinks}>
+                      {project.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>Ce wilder n'a pas encore de projets!</p>
+            )}
+          </p>
+          <button
+            onClick={sendEmail}
+            type="button"
+            className={styles.contactMeButton}
+          >
             Contactez-moi
           </button>
         </div>

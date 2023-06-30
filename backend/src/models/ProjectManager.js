@@ -24,6 +24,12 @@ class ProjectManager extends AbstractManager {
       ]
     );
   }
+
+  findProjectsWithUserId(userId) {
+    return this.database.query(`SELECT * FROM project WHERE user_id = ?`, [
+      userId,
+    ]);
+  }
 }
 
 module.exports = ProjectManager;
