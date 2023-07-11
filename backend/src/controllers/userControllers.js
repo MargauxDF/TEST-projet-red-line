@@ -4,7 +4,7 @@ const models = require("../models");
 const browse = async (req, res) => {
   const { page } = req.query;
   const limit = 3;
-  // permet de calculer le décalage par ex : si page = 1 => 1 * 1 = 0 *3 = 0 donc les 3premieres résultats etc...
+  // permet de calculer le décalage par ex : si page = 1 => 1 * 1 = 0 * 3 = 0 donc les 3 premieres résultats etc...
   const offset = (page - 1) * limit;
 
   try {

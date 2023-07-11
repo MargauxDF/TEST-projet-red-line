@@ -28,6 +28,7 @@ function WilderList() {
       .get(`${apiBaseUrl}/wilders?page=${currentPage}`)
       .then((response) => {
         setWilders(response.data.datas);
+        // permet d'obtenir le nb de pages entières nécessaires pour afficher toutes les données
         setMaxPage(Math.ceil(response.data.total / limitPerPage));
       })
       .catch((err) => console.error(err));

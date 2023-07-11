@@ -35,9 +35,10 @@ class UserManager extends AbstractManager {
   }
 
   findAll(limit, offset) {
-    return this.database.query(
-      `SELECT * FROM ${this.table} LIMIT ${limit} OFFSET ${offset}`
-    );
+    return this.database.query(`SELECT * FROM ${this.table} LIMIT ? OFFSET ?`, [
+      limit,
+      offset,
+    ]);
   }
 
   countUsers() {
